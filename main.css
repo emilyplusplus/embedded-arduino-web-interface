@@ -1,0 +1,12 @@
+body {
+    background: #333;
+}
+
+#response {
+    width: 600px;
+    height: 400px;
+}
+
+#cmd {
+    width: 500px;
+}
