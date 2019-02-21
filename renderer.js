@@ -9,7 +9,7 @@ let send = document.getElementById("send")
 let response = document.getElementById("response")
 
 var serialPort = new SerialPort('/dev/cu.usbmodem14101', {
-    baudRate: 9600
+    baudRate: 115200
 });
 
 // Switches the port into "flowing mode"
@@ -24,6 +24,6 @@ serialPort.on('readable', function () {
 
 send.onclick = function() {
     console.log(cmd.value)
-    serialPort.write(cmd.value)
+    serialPort.write(cmd.value + '\n')
     cmd.value = ''
 }
